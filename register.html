@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>หน้าจอการลงทะเบียน</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div>
+    <img class="inline" src="./Icon01.png" width="70px" height="70px">
+    <p class="inline">ในขั้นตอนที่ 1 ทำการลงทะเบียนก่อน เพื่อรับ <strong>ชื่อผู้ใช้</strong>
+      และ<strong>รหัสผ่าน</strong><br>
+      ใช้ในการกรอกใบสมัครในขั้นตอนที่ 2 </p>
+
+  </div>
+
+  <div class="container">
+    <div class="head">
+      <p style="font-weight:bold">ข้อมูลทั่วไป [ภาษาไทย]</p>
+    </div>
+
+    <div class="thai">
+      <pre style="padding-left:35%">
+          <u>หมายเลขบัตรประจำตัวประชาชน</u> <input type="text" id="ปชช" name="nick" onkeypress="isInputNumber(event)" maxlength="13" size="25" />
+        </pre>
+
+      <pre>
+          <u>คำนำหน้าชื่อ</u> <select name="lead" id="คำนำหน้า" style="width:11.5%">
+            <option value=""><i>เลือก...</i> </option>
+            <option value="นาย">นาย</option>
+            <option value="นาง">นาง</option>
+            <option value="นางสาว">นางสาว</option>
+          </select>             <u>ชื่อ</u> <input type="text" id="ชื่อ" name="fir" />         <u>นามสกุล</u> <input id="นามสกุล" type="text" name="sur" />
+        
+              <u>ชื่อเล่น</u> <input id="ชื่อเล่น" type="text" name="nick" size="10" />  <u>วัน/เดือน/ปี เกิด </u> <input id="วันที่" type="date" name="dateofbirth" id="dateofbirth">
+              
+              <u>จังหวัด</u> <select name="province" id="จังหวัด" style="width:11.5% ;height:25px">
+            <option value=""></option>
+            <option value="จังหวัด1">จังหวัด1</option>
+            <option value="จังหวัด2">จังหวัด2</option>
+            <option value="จังหวัด3">จังหวัด3</option>
+            <option value="จังหวัด4">จังหวัด4</option>
+            <option value="จังหวัด5">จังหวัด5</option>
+          </select>       <u>อำเภอ/เขต</u> <select name="aum" id="อำเภอ" style="width:20%;height:25px">
+            <option value=""></option>
+            <option value="อำเภอ1">อำเภอ1</option>
+            <option value="อำเภอ2">อำเภอ2</option>
+            <option value="อำเภอ3">อำเภอ3</option>
+            <option value="อำเภอ4">อำเภอ4</option>
+            <option value="อำเภอ5">อำเภอ5</option>
+          </select>     <u>ตำบล/แขวง</u> <select name="tum" id="ตำบล" style="width:19.5%;">
+            <option value=""></option>
+            <option value="ตำบล1">ตำบล1</option>
+            <option value="ตำบล2">ตำบล2</option>
+            <option value="ตำบล3">ตำบล3</option>
+            <option value="ตำบล4">ตำบล4</option>
+            <option value="ตำบล5">ตำบล5</option>
+          </select>
+        
+            <u>บ้านเลขที่</u> <input id="บ้านเลขที่" onkeypress="isInputNumber(event)" type="text" name="address" />   <u>ถนน</u> <input type="text" id="ถนน" name="road" />     <u>รหัสไปรษณีย์</u> <input type="text" id="รหัสไปรษณีย์" onkeypress="isInputNumber(event)"name="nick" maxlength="5" />
+        
+            <u>โทรศัพท์</u> <input id="โทรศัพท์" type="text" onkeypress="isInputNumber(event)" name="nick" maxlength="9" id="tel9"/> <u>โทรสาร</u> <input id="โทรสาร" type="text" name="nick" maxlength="9" id="tel9_2"/>    <u>โทรศัพท์มือถือ</u> <input type="text" id="โทรศัพท์มือถือ" onkeypress="isInputNumber(event)" name="usrtel" maxlength="10" id="tel" />
+               
+            <u style="padding-left: 23px">อีเมล</u> <input type='text' id='อีเมล'/><p class="inline" style="color:red"> <strong>*ใช้ในการรับรหัสผ่าน กรณีลืมรหัสผ่าน </strong></p>
+        </pre>
+    </div>
+
+    <div class="head">
+      <p style="font-weight:bold">ข้อมูลทั่วไป [ภาษาอังกฤษ]</p>
+    </div>
+
+    <div class="eng">
+      <pre>
+          Prefix <select name="lead" id="Prefix ">
+            <option value="Mr.">Mr.</option>
+            <option value="Ms.">Mrs.</option>
+            <option value="Miss">Miss</option>
+          </select>               <u>First name</u> <input id="ชื่ออังกฤษ" type="text" name="fir" />    <u>Last name</u> <input type="text" id="นามสกุลอังกฤษ" name="sur" />
+        </pre>
+    </div>
+
+    <div class="footer">
+      <button class="submit" type="button" onclick="checkAll()">บันทึก</button>
+     
+      <button class="cancel" type="button" onclick="cleartext()">ยกเลิก</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

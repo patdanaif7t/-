@@ -1,0 +1,52 @@
+.head {
+    /* max-width: 1200px; */
+    /* width: auto; */
+    /* height: wrap; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin-top: 1.5%;
+    margin-bottom: 1%; */
+    border: 1px solid  #00cc33;
+    background-color: #66ff8c
+}
+.footer {
+    border: 1px solid  #00cc33;
+    background-color: #66ff8c;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.container {
+    border: 1px solid  #00cc33;
+    margin-left: 5px;
+    margin-right: 5px ;
+    max-width: 900px;
+}
+
+.submit {
+    margin-top: 1%;
+    margin-left: 78%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border:  2px solid black;
+}
+.cancel {
+    padding-left: 3%;
+    padding-right: 3%;
+    border:  2px solid black;
+
+}
+input,select {
+    height: 20px
+}
+
+.inline {
+    display: inline-block;
+}
+
+/* ------ ปฏิทิน ----------*/
+[type="date"] {
+    background: url("Icon02.png")  97% 50% no-repeat ;
+  }
+
+  /* ------ ปฏิทิน ----------*/
